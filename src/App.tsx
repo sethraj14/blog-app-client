@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import BlogList from "./components/BlogList";
+import AppRouter from './AppRouter';
 
 function App() {
   return (
     <div className="App">
-      <BlogList/>
+      <AppRouter />
     </div>
   );
 }
