@@ -1,46 +1,60 @@
-# Getting Started with Create React App
+# Blog Frontend System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This frontend system is a web application for a blogging platform, built with React. It supports operations such as displaying blog posts and creating new ones.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Display a list of blog posts.
+- View individual blog posts.
+- Create new blog posts through a form.
+- Responsive design for various device sizes.
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Before running this project, ensure you have the following installed:
+- Node.js (LTS version recommended)
+- npm (usually comes with Node.js)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone https://github.com/sethraj14/blog-app-client.git
+   cd blog-app-client
+   ```
 
-### `npm run build`
+2. Install dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Set up your environment variables by creating a `.env.local` file in the root directory with the following content (update values based on your environment, particularly the backend server URL):
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```plaintext
+   REACT_APP_API_URL=https://blog-app-server-hmmp.onrender.com/graphql
+   ```
 
-### `npm run eject`
+   This is where you'll specify the URL of your GraphQL backend.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Start the development server:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   The application should now be running and accessible at `http://localhost:3000`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Usage
 
-## Learn More
+- **View Blog Posts**: Navigate to the home page to see a list of all blog posts.
+- **Read a Blog Post**: Click on a blog post's "Read More" button to view the full content.
+- **Create a Blog Post**: Navigate to the create post page (the route might be `/create` or accessible via a navigation menu) and fill out the form to add a new blog post.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
