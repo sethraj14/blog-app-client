@@ -5,7 +5,12 @@ import AppRouter from './AppRouter';
 function App() {
   return (
     <div className="App">
-      <AppRouter />
+      <div className="header">
+        <h1>Blog App</h1>
+      </div>
+      <div className="main-content">
+        <AppRouter />
+      </div>
     </div>
   );
 }

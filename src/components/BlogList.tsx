@@ -15,13 +15,34 @@ const BlogList = () => {
 
   return (
     <div>
+      <h2 className={'blog-list-title'}>{'Blogs List'}</h2>
+      <div className="container">
+        {data?.getAllBlogPosts.map((blog) => (
+          <div className="blog-card">
+            <h2>{blog.title}</h2>
+            <div className="blog-card-content">
+              <p className="blog-date">
+                {new Date(parseInt(blog.createdAt)).toLocaleDateString(
+                  'en-IN',
+                  {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  }
+                )}
+              </p>
+              <p className={'blog-author'}>By: {blog.author}</p>
+              <p className="blog-excerpt">
+                {blog.content.substring(0, 200)}...
+              </p>
+              <Link to={`/blog/${blog.id}`} className="read-more">
+                Read More
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
       <CreateBlogPostForm />
-      {data?.getAllBlogPosts?.map(({ id, title }) => (
-        <div key={id}>
-          <h3>{title}</h3>
-          <Link to={`/blog/${id}`}>Read More</Link>
-        </div>
-      ))}
     </div>
   );
 };
