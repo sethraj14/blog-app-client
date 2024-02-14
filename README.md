@@ -54,6 +54,7 @@ Before running this project, ensure you have the following installed:
 
 ## Deployment
 
+This application is automatically deployed to Vercel upon each push to the main branch. You can view the live application here: [Blog App](https://blog-app-client-sand.vercel.app/).
 
 ## License
 
